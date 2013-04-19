@@ -51,3 +51,11 @@ gem "acts_as_list"
 gem "bluecloth"
 gem 'RedCloth', :require => 'redcloth'
 gem 'bootswatch-rails'
+
+group :production, :staging do
+  gem "pg"
+end
+
+group :development, :test do
+  gem "sqlite3", "~> 1.3.7", :require => "sqlite3"
+end
